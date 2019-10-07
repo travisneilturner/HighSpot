@@ -30,8 +30,8 @@ The changeFile will have the following structure:
 ]
 ```
 
-For "add-song", both "song_id" and "playlist_id" must exist in the mixFile or mix-edit will 
-terminate with an error message.  For "add-playlist", similar restrictions apply.  Deleting 
+For `"add-song"`, both `"song_id"` and `"playlist_id"` must exist in the mixFile or mix-edit will 
+terminate with an error message.  For `"add-playlist"`, similar restrictions apply.  Deleting 
 a non-existent playlist is a no-op.  
 
 
