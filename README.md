@@ -7,10 +7,10 @@ https://nodejs.org/en/download/package-manager/#macos
 
 To run, invoke `node mix-edit <mixFile> <changeFile> <outputFile>`.
 
-CHANGEFILE FORMATTING:
+## CHANGEFILE FORMATTING:
 
 The changeFile will have the following structure:  
-
+```
 [
   {
     "op": "add-song",
@@ -28,13 +28,14 @@ The changeFile will have the following structure:
   }
   ...
 ]
+```
 
 For "add-song", both "song_id" and "playlist_id" must exist in the mixFile or mix-edit will 
 terminate with an error message.  For "add-playlist", similar restrictions apply.  Deleting 
 a non-existent playlist is a no-op.  
 
 
-SCALABILITY:
+## SCALABILITY:
 
 To scale to very large mixtape sizes effectively, it would make sense to store the raw data 
 (mixtape) in a distributed datastore such as Apache Cassandra (since we don't need any joins).  
