@@ -38,7 +38,7 @@ a non-existent playlist is a no-op.
 ## SCALABILITY:
 
 To scale to very large mixtape sizes effectively, it would make sense to store the raw data 
-(mixtape) in a distributed datastore such as Apache Cassandra (since we don't need any joins).  
+(mixtape) in a distributed datastore such as MongoDB or Apache Cassandra (since we don't need any joins).  
 Incoming change files of very large size could be partitioned, ingested, and processed in parallel data 
-streams using Apache Flink.  Additionally, we could service real-time requests (from 
+streams using Apache Flink of NiFi.  Additionally, we could service real-time requests (from 
 Web/Microservice API) using the same approach.  
