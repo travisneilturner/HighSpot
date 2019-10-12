@@ -17,7 +17,7 @@ function validateSongs(songs, mixtape) {
 
 if (process.argv.length != 5) {
   printUsage()
-  process.exit(0)
+  process.exit(1)
 }
 
 let args = process.argv.slice(2)
@@ -84,5 +84,5 @@ for (let change of changes) {
   }
 }
 
-fs.writeFileSync(defaultOutFile, JSON.stringify(mixtape, null, 2))
+fs.writeFileSync(args[2], JSON.stringify(mixtape, null, 2))
 console.log('Changes applied successfully!')
